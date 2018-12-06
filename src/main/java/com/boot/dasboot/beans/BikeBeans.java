@@ -1,22 +1,10 @@
-package com.boot.dasboot.model;
+package com.boot.dasboot.beans;
 
 import java.math.BigDecimal;
 import java.sql.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+public class BikeBeans {
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@Entity
-//@JsonIgnoreProperties({"hibernateLazyInitializer" , "handler"})
-public class Bike {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String name;
 	private String email;
@@ -24,11 +12,27 @@ public class Bike {
 	private String model;
 	private String serialNumber;
 	
-	//@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM-dd-yyyy")
 	private BigDecimal purchasePrice;
 	private Date purchaseDate;
 	private boolean contact;
 	
+	public BikeBeans() {
+		
+	}
+	
+	public BikeBeans(Long id, String name, String email, String phone, String model, String serialNumber,
+			BigDecimal purchasePrice, Date purchaseDate, boolean contact) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+		this.model = model;
+		this.serialNumber = serialNumber;
+		this.purchasePrice = purchasePrice;
+		this.purchaseDate = purchaseDate;
+		this.contact = contact;
+	}
 	public String getName() {
 		return name;
 	}
@@ -83,5 +87,4 @@ public class Bike {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
 }
