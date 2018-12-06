@@ -6,7 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.boot.dasboot.model.Bike;
 
-@Repository
+
 @Transactional
 public interface BikeRepository extends JpaRepository<Bike, Long>  {
 

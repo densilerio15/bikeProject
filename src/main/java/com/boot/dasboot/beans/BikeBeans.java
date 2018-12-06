@@ -17,7 +17,7 @@ public class BikeBeans {
 	private boolean contact;
 	
 	public BikeBeans() {
-		
+		//testing
 	}
 	
 	public BikeBeans(Long id, String name, String email, String phone, String model, String serialNumber,
